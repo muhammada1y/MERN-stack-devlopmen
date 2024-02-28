@@ -1,11 +1,21 @@
-import React from 'react'
+// App.jsx
+import { Container } from 'react-bootstrap';
+import Header from './commponents/Header.jsx';
+import Footer from './commponents/Footer.jsx';
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <>
+      <Header />
+      <main className='py-3'>
+        <Container>
+          <Outlet />
+        </Container>
+      </main>
+      <Footer />
+    </>
+  );
+};
 
-export default App
+export default App;
